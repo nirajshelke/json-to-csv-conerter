@@ -1,0 +1,39 @@
+{
+    "name": "JSON-Formatter",
+    "version": "0.0.1",
+    "bugs": "https://github.com/JSON-Formatter/issues",
+    "dependencies": {
+        "@lwc/synthetic-shadow": "^2.44.0",
+        "@salesforce-ux/design-system": "^2.20.1",
+        "compression": "^1.7.4",
+        "express": "^4.18.1",
+        "helmet": "^6.0.0",
+        "lightning-base-components": "^1.17.3-alpha"
+    },
+    "engines": {
+        "node": ">=10.13.0",
+        "npm": ">=6.4.1",
+        "yarn": ">=1.9.4"
+    },
+    "homepage": "https://github.com/JSON-Formatter",
+    "keywords": [
+        "lwc"
+    ],
+    "license": "MIT",
+    "repository": "JSON-Formatter",
+    "scripts": {
+        "build": "lwc-services build -m production",
+        "build:development": "lwc-services build",
+        "lint": "eslint ./src/**/*.js",
+        "postinstall": "husky install",
+        "precommit": "npm run prettier:verify && [ $? -eq 0 ] && npm run lint",
+        "prettier": "prettier --write \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
+        "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,ts,yaml,yml}\"",
+        "start": "node scripts/server.js",
+        "test:unit": "lwc-services test:unit",
+        "test:unit:coverage": "lwc-services test:unit --coverage",
+        "test:unit:debug": "lwc-services test:unit --debug",
+        "test:unit:watch": "lwc-services test:unit --watch",
+        "watch": "lwc-services watch"
+    }
+}

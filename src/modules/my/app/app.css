@@ -1,0 +1,26 @@
+.body{
+    background-color: white;
+    height: 100%;
+    max-width: 100%;
+}
+
+button {
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 8px;
+    position: relative;
+    color: #3f3e3e;
+    border-color: #3f3e3e;
+    border-radius: 4px;
+    border-width: 1px;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+ }
+
+ .body textarea {
+    resize: none;
+    height: 100%;
+}
